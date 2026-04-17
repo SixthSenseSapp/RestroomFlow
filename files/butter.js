@@ -1,6 +1,8 @@
 // butter.js
 
 (function(root){
+    root = typeof globalThis !== 'undefined' ? globalThis : (typeof window !== 'undefined' ? window : root);
+
     var Butter = function() {
 
         var self = this;
@@ -115,4 +117,4 @@
 
     root.butter = new Butter();
 
-})(this);
+})(typeof globalThis !== 'undefined' ? globalThis : (typeof window !== 'undefined' ? window : this));

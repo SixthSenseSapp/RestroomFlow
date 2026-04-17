@@ -1,0 +1,155 @@
+:root {
+  color: #edf2f4;
+  background: #162447;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: #162447;
+  color: #edf2f4;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+#butter {
+  min-height: 100vh;
+  background: #162447;
+}
+
+.app-shell {
+  min-height: 100vh;
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.app-card {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 24px;
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.24);
+  overflow: hidden;
+}
+
+.header-row {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+  align-items: center;
+}
+
+.header-row h1 {
+  margin: 0;
+  font-size: clamp(2rem, 3vw, 3rem);
+}
+
+.header-row p {
+  margin: 0;
+  color: #a7b0d6;
+}
+
+.search-container {
+  width: 100%;
+  margin: 24px 0 8px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 16px 18px;
+  font-size: 1rem;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.16);
+  color: #162447;
+  outline: none;
+}
+
+.search-input::placeholder {
+  color: rgba(22, 36, 71, 0.7);
+}
+
+.student-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.student-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 22px;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.student-card:hover {
+  transform: translateY(-2px);
+}
+
+.student-card.out {
+  background: rgba(255, 74, 101, 0.18);
+  border-color: rgba(255, 74, 101, 0.38);
+}
+
+.student-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.student-name {
+  font-size: 1rem;
+  color: #162447;
+}
+
+.status-label {
+  font-size: 0.9rem;
+  color: #34476f;
+}
+
+.action-button {
+  min-width: 140px;
+  border: none;
+  border-radius: 999px;
+  padding: 12px 18px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.action-button:hover {
+  transform: translateY(-1px);
+  opacity: 0.95;
+}
+
+.action-button.out {
+  background: #ff6b6b;
+}
+
+.action-button.in {
+  background: #3f8cff;
+}
+
+.footer-note {
+  margin-top: 26px;
+  color: #bcc6e5;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.credits {
+  margin-top: 16px;
+  padding: 18px 0 24px;
+  color: #9fb4d6;
+  font-size: 0.9rem;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
