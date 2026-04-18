@@ -12,7 +12,7 @@ CORS(app)
 # Use your actual Jibble keys here or in a .env file
 CLIENT_ID = os.getenv("JIBBLE_CLIENT_ID", "YOUR_CLIENT_ID")
 CLIENT_SECRET = os.getenv("JIBBLE_CLIENT_SECRET", "YOUR_CLIENT_SECRET")
-
+    
 break_start_times = {}
 
 def get_token():
