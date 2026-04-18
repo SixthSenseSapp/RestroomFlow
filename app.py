@@ -16,7 +16,7 @@ CLIENT_SECRET = os.getenv("JIBBLE_CLIENT_SECRET", "YOUR_CLIENT_SECRET")
 break_start_times = {}
 
 def get_token():
-    url = "https://jibble.io"
+    url = "https://identity.jibble.io/connect/token"
     data = {
         'grant_type': 'client_credentials',
         'client_id': CLIENT_ID,
@@ -39,10 +39,10 @@ def track_break():
         return jsonify({"status": "error", "message": "unable to get auth token"}), 500
 
     headers = {'Authorization': f'Bearer {token}', 'Content-Type': 'application/json'}
-    url = "https://jibble.io"
+    url = "https://time-attendance-api.jibble.io/v1/entries"
     payload = {
         "personId": student_id,
-        "type": "Break" if is_starting else "In",
+        "type": "Break" if is_starting else "Resume",
         "timestamp": datetime.utcnow().isoformat() + "Z"
     }
 
